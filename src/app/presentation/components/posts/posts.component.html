@@ -1,0 +1,25 @@
+<div class="p-4 max-w-3xl mx-auto">
+  <input
+  #searchInput
+  type="text"
+  (input)="onSearch(searchInput.value)"
+  placeholder="Buscar por título..."
+  class="w-full p-2 border border-gray-300 rounded mb-4"
+/>
+
+
+  <div *ngIf="loading" class="text-center">
+    <span class="text-blue-500">Cargando...</span>
+  </div>
+
+  <div *ngIf="error" class="text-red-500">
+    {{ error }}
+  </div>
+
+  <div class="grid gap-4">
+    <div *ngFor="let post of filteredPosts" class="bg-white shadow-md p-4 rounded">
+      <h2 class="text-xl font-bold mb-2">{{ post.title }}</h2>
+      <p>{{ post.body }}</p>
+    </div>
+  </div>
+</div>
