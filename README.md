@@ -1,27 +1,37 @@
-# PruebaTecnicaSelaski
+# 🧪 Prueba Técnica Frontend - Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+Aplicación desarrollada como parte de una prueba técnica para evaluar habilidades en Angular, RxJS, TailwindCSS, consumo de APIs y uso de pipes personalizados.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🚀 Tecnologías usadas
 
-## Code scaffolding
+- ✅ Angular 14
+- ✅ RxJS (`debounceTime`, `switchMap`)
+- ✅ TailwindCSS
+- ✅ HttpClient
+- ✅ Pipes personalizados (`filterPosts`, `highlight`)
+- ✅ Arquitectura limpia (por capas)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## 🎯 Funcionalidad
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- 🔍 Listado de posts consumidos desde la API pública [JSONPlaceholder](https://jsonplaceholder.typicode.com/posts)
+- 🔎 Filtro de búsqueda en tiempo real por título
+- 🎨 Estilos responsive con TailwindCSS
+- ⏳ Spinner de carga con animación y marca personalizada (`SELASKI`)
+- 🧠 Pipes personalizados:
+  - `filterPosts`: Filtra los posts según el término ingresado, ignorando mayusculas o minusculas
+  - `highlight`: Resalta el texto buscado dentro del título de cada registro
+- 📊 Contador de resultados encontrados vs. total
+- 🧼 Buenas prácticas y arquitectura, separando por capas (`domain`, `application`, `infrastructure`, `presentation`)
 
-## Running unit tests
+---
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📦 Instalación
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/FelipeAriasMosquera/Prueba-T-cnica-Frontend---Angular.git
+   cd Prueba-T-cnica-Frontend---Angular
