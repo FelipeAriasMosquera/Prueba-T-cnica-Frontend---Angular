@@ -5,12 +5,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FilterPostsPipe } from './application/use-cases/filter-posts.pipe';
 import { PostsComponent } from './presentation/components/posts/posts.component';
+import { HighlightPipe } from './application/use-cases/highlight.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
-    FilterPostsPipe
+    FilterPostsPipe,
+    HighlightPipe
     ],
   imports: [
     BrowserModule,

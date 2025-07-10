@@ -1,25 +1,46 @@
-<div class="p-4 max-w-3xl mx-auto">
-  <input
-  #searchInput
-  type="text"
-  (input)="onSearch(searchInput.value)"
-  placeholder="Buscar por título..."
-  class="w-full p-2 border border-gray-300 rounded mb-4"
-/>
+<div class="min-h-screen bg-gradient-to-br from-blue-100 via-white to-orange-300">
+    <h1 class="text-5xl sm:text-6xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-900 via-blue-900 to-pink-900 drop-shadow-lg tracking-wide mb-8">
+    SELASKI
+    </h1>
 
+    <div class="p-4 max-w-3xl mx-auto">
+    <input
+        #searchInput
+        type="text"
+        (input)="onSearch(searchInput.value)"
+        placeholder="Buscar por título..."
+        class="w-full p-2 border border-gray-300 rounded mb-4 text-sm sm:text-base"
+    />
 
-  <div *ngIf="loading" class="text-center">
-    <span class="text-blue-500">Cargando...</span>
-  </div>
-
-  <div *ngIf="error" class="text-red-500">
-    {{ error }}
-  </div>
-
-  <div class="grid gap-4">
-    <div *ngFor="let post of filteredPosts" class="bg-white shadow-md p-4 rounded">
-      <h2 class="text-xl font-bold mb-2">{{ post.title }}</h2>
-      <p>{{ post.body }}</p>
+    <div  *ngIf="filteredPosts.length > 0"  class="text-sm text-gray-600 mb-2">
+        {{ filteredPosts.length }} de {{ posts.length }} resultados
     </div>
-  </div>
+
+    <div *ngIf="filteredPosts.length === 0 && !loading" class="text-center text-gray-500">
+        No se encontraron resultados para tu búsqueda
+    </div>
+
+
+    <div *ngIf="loading" class="flex justify-center items-center my-6">
+    <div class="text-xl font-bold text-blue-600 animate-spin-slow">
+        SELASKI
+    </div>
+    </div>
+
+
+
+    <div *ngIf="error" class="text-red-500 text-sm sm:text-base">
+        {{ error }}
+    </div>
+    
+    <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-2">
+        <div *ngFor="let post of filteredPosts" class="bg-white shadow-md p-4 rounded">
+        <h2 class="text-lg sm:text-xl font-bold mb-2" [innerHTML]="post.title | highlight:searchTerm">
+        </h2>
+
+        <p class="text-sm sm:text-base">{{ post.body }}</p>
+        </div>
+    </div>
+    </div>
+     
 </div>
