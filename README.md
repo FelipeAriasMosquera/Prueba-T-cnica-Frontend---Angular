@@ -35,3 +35,26 @@ Aplicación desarrollada como parte de una prueba técnica para evaluar habilida
    ```bash
    git clone https://github.com/FelipeAriasMosquera/Prueba-T-cnica-Frontend---Angular.git
    cd Prueba-T-cnica-Frontend---Angular
+   
+2. Instala las dependencias
+   ```bash
+   npm install
+
+3. Corre la app:
+   ```bash
+   ng serve
+
+4. Abre tu navegador
+   ```bash
+   http://localhost:4200/
+
+## 📁 Estructura del proyecto
+  ![image](https://github.com/user-attachments/assets/cb1a54e2-3cee-4ecd-b4cf-11d607e6e0a7)
+
+## 📈 ¿Qué agregaría si tuviera más tiempo?
+   - **Implementación de routing**: para mejor navegacion
+   - **Ordenamiento alfabético**: Agregar la opción de ordenar los posts ascendente o descendente.
+   - **Interfaz más completa**: Incluir botones de navegación, filtros adicionales y una paginación que     mejore la experiencia en listas largas.
+
+✍️ Autor
+- Felipe Arias Mosquera
