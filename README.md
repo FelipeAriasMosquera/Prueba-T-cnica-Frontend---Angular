@@ -35,16 +35,26 @@ Aplicación desarrollada como parte de una prueba técnica para evaluar habilida
    ```bash
    git clone https://github.com/FelipeAriasMosquera/Prueba-T-cnica-Frontend---Angular.git
    cd Prueba-T-cnica-Frontend---Angular
+
+2. Se abre desde Visual Studio o cualquier otro IDE que tengas
+   ```bash
+   code .
+
+3. verifica que tengas angular 14
+   ```bash
+   ng version
+   #npm install -g @angular/cli@14
+
    
-2. Instala las dependencias
+1. Instala las dependencias
    ```bash
    npm install
 
-3. Corre la app:
+2. Corre la app:
    ```bash
    ng serve
 
-4. Abre tu navegador
+3. Abre tu navegador
    ```bash
    http://localhost:4200/
 
@@ -58,3 +68,4 @@ Aplicación desarrollada como parte de una prueba técnica para evaluar habilida
 
 ✍️ Autor
 - Felipe Arias Mosquera
+
